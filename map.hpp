@@ -1,10 +1,14 @@
-#pragma once
+#ifndef MAP_HPP
+#define MAP_HPP
+
+#include <vector>
+#include <string>
 
 class Map {
-    int _height;
-    int _width;
+    std::vector<std::string> grid;
 public:
-    Map(int height = 31, int width = 28);
-    int GetHeight() const;
-    int GetWidth() const;
+    Map();
+    void draw() const;
 };
+
+#endif

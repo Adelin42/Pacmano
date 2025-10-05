@@ -1,15 +1,18 @@
-#pragma once
+#ifndef GAME_ENGINE_HPP
+#define GAME_ENGINE_HPP
 
-#include "map.hpp"
 #include "pacmano.hpp"
 #include "ghost.hpp"
+#include "map.hpp"
+#include "drawer.hpp"
 
 class GameEngine {
-    Map _board;
-    Pacmano _pacman;
-    Ghost _ghosts[4]; 
+    Pacmano pac;
+    Ghost ghost;
+    Map map;
 public:
-    GameEngine();
-    void Init();
-    void Run();
+    void run();
 };
+
+#endif
+
