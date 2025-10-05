@@ -1,14 +1,16 @@
-#pragma once
+#ifndef GHOST_HPP
+#define GHOST_HPP
 
 #include "point.hpp"
 #include "direction.hpp"
 
 class Ghost {
-    Point _position;
-    Direction _direction;
+    Point pos;
 public:
-    Ghost(const Point& start);
-    void Move();
-    void SetDirection(Direction dir);
-    Point GetPosition() const;
+    Ghost(int x=5, int y=5);
+    void move();
+    Point getPosition() const;
 };
+
+#endif
+

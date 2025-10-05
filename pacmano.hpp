@@ -1,14 +1,16 @@
-#pragma once
+#ifndef PACMAN_HPP
+#define PACMAN_HPP
 
 #include "point.hpp"
 #include "direction.hpp"
 
 class Pacmano {
-    Point _position;
-    Direction _direction;
+    Point pos;
+    Direction dir;
 public:
-    Pacmano(const Point& start);
-    void Move();
-    void SetDirection(Direction dir);
-    Point GetPosition() const;
+    Pacmano(int x=1, int y=1);
+    void move();
+    Point getPosition() const;
 };
+
+#endif

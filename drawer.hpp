@@ -1,9 +1,14 @@
-#pragma once
+#ifndef DRAWER_HPP
+#define DRAWER_HPP
 
-#include "point.hpp"
+#include "pacmano.hpp"
+#include "ghost.hpp"
+#include "map.hpp"
+#include <iostream>
 
 class Drawer {
 public:
-    void DrawEntity(Point position, char symbol);
-    void DrawBoard(int width, int height);
+    static void render(const Map& map, const Pacmano& pac, const Ghost& ghost);
 };
+
+#endif
